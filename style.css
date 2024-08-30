@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4be;
+    background: url("p2.webp") no-repeat center center/cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: solid 4px #af4d98;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 45vh;
+    width: 90%;
+    max-width: 40rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);/
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+}
+
+form select,
+button,
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+
+form input {
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.dropdown i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #af4d98;
+    transition: color 0.3s ease;
+
+}
+
+.dropdown i:hover {
+    color: #ff69b4;
+
+}
+
+.select-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid #af4d98;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.select-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.select-container select {
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 0.5rem;
+    color: #333;
+    cursor: pointer;
+    appearance: none;
+}
+
+.select-container::after {
+    content: '▼';
+    font-size: 1rem;
+    position: absolute;
+    right: 1rem;
+    color: #af4d98;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+
+}
+
+.select-container select:focus+.select-container::after {
+    transform: rotate(180deg);
+
+}
+
+.select-container img {
+    max-width: 2rem;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.select-container:hover img {
+    transform: scale(1.1);
+
+}
+
+
+.msg {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #ffebf7;
+    border-left: 6px solid #af4d98;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    transition: box-shadow 0.3s ease;
+}
+
+.msg:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.msg strong {
+    color: #af4d98;
+    font-weight: bold;
+}
+
+.msg a {
+    color: #af4d98;
+    text-decoration: none;
+    border-bottom: 1px dashed #af4d98;
+    transition: color 0.3s ease;
+}
+
+.msg a:hover {
+    color: #ff69b4;
+    border-bottom-color: #ff69b4;
+}
+
+form button {
+    height: 3rem;
+    background-color: #af4d98;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+
+}
+
+form button:hover {
+    background-color: #ff69b4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+
+}
+
+form button:active {
+    background-color: #af4d98;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(175, 77, 152, 0.5);
+}
+
+form input:focus {
+    border-color: #af4d98;
+    box-shadow: 0 0 0 3px rgba(175, 77, 152, 0.2);
+}
+
+form input:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
